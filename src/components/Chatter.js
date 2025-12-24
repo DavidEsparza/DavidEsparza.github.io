@@ -42,21 +42,22 @@ Introduce yourself in a friendly way (2-3 sentences max).`;
           model: "gemini-2.5-flash",
           contents: systemPrompt,
         });
-        
+
         setMessages([
           {
             role: "assistant",
             content: response.text,
           },
         ]);
-        
+
         console.log("Chatbot initialized:", response.text);
       } catch (error) {
         console.error("Error initializing chatbot:", error);
         setMessages([
           {
             role: "assistant",
-            content: "Hi! I'm here to help you learn more about this portfolio. Feel free to ask me anything!",
+            content:
+              "Hi! I'm here to help you learn more about this portfolio. Feel free to ask me anything!",
           },
         ]);
       }
@@ -111,12 +112,14 @@ Introduce yourself in a friendly way (2-3 sentences max).`;
       <div className="chatbot-header">
         <h3>💬 Chat Assistant</h3>
       </div>
-      
+
       <div className="chatbot-messages">
         {messages.map((msg, index) => (
           <div
             key={index}
-            className={`message ${msg.role === "user" ? "user-message" : "assistant-message"}`}
+            className={`message ${
+              msg.role === "user" ? "user-message" : "assistant-message"
+            }`}
           >
             <strong>{msg.role === "user" ? "You" : "Assistant"}:</strong>
             <p>{msg.content}</p>

@@ -310,6 +310,47 @@ button:hover {
   max-width: 80%;
 }
 
+.eye {
+  position: fixed;
+  right: 70px;
+}
+
+.eyebrow {
+  padding: 0;
+  cursor: pointer;
+  margin: 0;
+  max-height: 2.75rem;
+  font-size: 6rem;
+
+}
+
+.eyebox {
+  width: 65px;
+  height: 65px;
+  padding-top:5px;
+  cursor: pointer; 
+  margin-left: 0.5rem;
+}
+
+.pupil {
+  width: 10px;
+  height:10px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative
+}
+
+.closed-eye {
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 0;
+  margin: 0;
+  margin-right: 5px;
+  margin-top: 15px;
+  max-height: 2.75rem;
+  font-size: 4rem;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

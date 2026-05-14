@@ -109,10 +109,6 @@ Introduce yourself in a friendly way (2-3 sentences max).`;
 
   return (
     <div className="chatbot-container">
-      <div className="chatbot-header">
-        <h3>💬 Chat Assistant</h3>
-      </div>
-
       <div className="chatbot-messages">
         {messages.map((msg, index) => (
           <div

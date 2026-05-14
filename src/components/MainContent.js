@@ -24,28 +24,43 @@ function MainContent() {
       render={({ state, fullpageApi }) => (
         <ReactFullpage.Wrapper>
           <div className="section">
-            <h2>{t("home.title")}</h2>
-            <p>{t("home.welcome")}</p>
+            <h1>{t("home.title")}</h1>
+            <h3>{t("home.subtitle")}</h3>
+            <p className="contact-info">
+              {t("home.phone")} | {t("home.email")} | {t("home.location")}
+            </p>
+            <p className="welcome-text">{t("home.welcome")}</p>
           </div>
 
           <div className="section">
             <h2>{t("about.title")}</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            
-            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-            
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-            
-            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+            <p>{t("about.description")}</p>
           </div>
 
           <div className="section">
             <h2>{t("skills.title")}</h2>
-            <ul>
-              <li>{t("skills.javascript")}</li>
-              <li>{t("skills.react")}</li>
-              <li>{t("skills.nodejs")}</li>
-            </ul>
+            <div className="skills-container">
+              <div className="skill-category">
+                <h3>{t("skills.frontEnd.title")}</h3>
+                <p>{t("skills.frontEnd.items")}</p>
+              </div>
+              <div className="skill-category">
+                <h3>{t("skills.backEnd.title")}</h3>
+                <p>{t("skills.backEnd.items")}</p>
+              </div>
+              <div className="skill-category">
+                <h3>{t("skills.cloud.title")}</h3>
+                <p>{t("skills.cloud.items")}</p>
+              </div>
+              <div className="skill-category">
+                <h3>{t("skills.languages.title")}</h3>
+                <p>{t("skills.languages.items")}</p>
+              </div>
+              <div className="skill-category">
+                <h3>{t("skills.soft.title")}</h3>
+                <p>{t("skills.soft.items")}</p>
+              </div>
+            </div>
           </div>
 
           <div className="section">
@@ -58,23 +73,57 @@ function MainContent() {
               <h3>{t("projects.project2.title")}</h3>
               <p>{t("projects.project2.description")}</p>
             </div>
+            <div className="project-item">
+              <h3>{t("projects.project3.title")}</h3>
+              <p>{t("projects.project3.description")}</p>
+            </div>
           </div>
 
           <div className="section">
             <h2>{t("experience.title")}</h2>
             <div className="experience-item">
-              <h3>{t("experience.jobTitle")}</h3>
-              <p>{t("experience.companyName")}</p>
-              <p>{t("experience.period")}</p>
+              <h3>{t("experience.job1.title")}</h3>
+              <h4>{t("experience.job1.company")} - {t("experience.job1.location")}</h4>
+              <p className="period">{t("experience.job1.period")}</p>
+              <ul>
+                {t("experience.job1.responsibilities", { returnObjects: true }).map((resp, index) => (
+                  <li key={index}>{resp}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="experience-item">
+              <h3>{t("experience.job2.title")}</h3>
+              <h4>{t("experience.job2.company")} - {t("experience.job2.location")}</h4>
+              <p className="period">{t("experience.job2.period")}</p>
+              <ul>
+                {t("experience.job2.responsibilities", { returnObjects: true }).map((resp, index) => (
+                  <li key={index}>{resp}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="experience-item">
+              <h3>{t("experience.job3.title")}</h3>
+              <h4>{t("experience.job3.company")} - {t("experience.job3.location")}</h4>
+              <p className="period">{t("experience.job3.period")}</p>
+              <ul>
+                {t("experience.job3.responsibilities", { returnObjects: true }).map((resp, index) => (
+                  <li key={index}>{resp}</li>
+                ))}
+              </ul>
             </div>
           </div>
 
           <div className="section">
             <h2>{t("education.title")}</h2>
             <div className="education-item">
-              <h3>{t("education.degree")}</h3>
-              <p>{t("education.universityName")}</p>
-              <p>{t("education.period")}</p>
+              <h3>{t("education.degree1.title")}</h3>
+              <h4>{t("education.degree1.institution")}</h4>
+              <p className="period">{t("education.degree1.period")}</p>
+            </div>
+            <div className="education-item">
+              <h3>{t("education.degree2.title")}</h3>
+              <h4>{t("education.degree2.institution")}</h4>
+              <p className="period">{t("education.degree2.period")}</p>
             </div>
           </div>
 

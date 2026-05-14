@@ -48,12 +48,6 @@ function App() {
           height={containerSize.height}
         />
       </div>
-      <div style={{ position: "fixed", top: 60, left: 40 }}>
-        <p>x: {coordinates.x}</p>
-        <p>y: {coordinates.y}</p>
-        <p>width: {containerSize.width}</p>
-        <p>height: {containerSize.height}</p>
-      </div>
     </div>
   );
 }

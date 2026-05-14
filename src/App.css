@@ -432,3 +432,145 @@ button:hover {
     max-width: 90%;
   }
 }
+
+/* Professional Information Styles */
+.contact-info {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: var(--secondary-color);
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+}
+
+.section h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.section h4 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin: 0.5rem 0;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.skill-category {
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.skill-category p {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.experience-item h3,
+.education-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.experience-item h4,
+.education-item h4 {
+  color: var(--secondary-color);
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.period {
+  font-style: italic;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.experience-item ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.experience-item li,
+.education-item li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.project-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.project-item p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Responsive adjustments for professional sections */
+@media (max-width: 1024px) {
+  .section {
+    padding: 3rem 3rem;
+  }
+  
+  .skills-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 1.5rem;
+  }
+  
+  .section h1 {
+    font-size: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .contact-info {
+    font-size: 0.9rem;
+  }
+  
+  .welcome-text {
+    font-size: 1rem;
+  }
+}

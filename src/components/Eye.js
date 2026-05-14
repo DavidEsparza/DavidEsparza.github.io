@@ -69,6 +69,16 @@ function Eye({ x, y, width }) {
     }, 1000);
   };
 
+  // Calculate eyebrow position based on cursor Y position
+  const { START_TOP, MOVE_ZONE_Y } = EYE_CONFIG;
+  let eyebrowOffset = 0;
+  
+  if (y < START_TOP) {
+    eyebrowOffset = -3; // Move up 3 pixels
+  } else if (y > START_TOP + MOVE_ZONE_Y) {
+    eyebrowOffset = 3; // Move down 3 pixels
+  }
+
   return (
     <motion.div 
       className="eye" 
@@ -77,10 +87,15 @@ function Eye({ x, y, width }) {
       style={{ cursor: 'pointer' }}
     >
       {isClosed ? (
-        <p className="closed-eye">{"><"}</p>
+        <p className="closed-eye">{"━"}</p>
       ) : (
         <>
-          <div className="eyebrow">⏜️</div>
+          <div 
+            className="eyebrow"
+            style={{ transform: `translateY(${eyebrowOffset}px)` }}
+          >
+            ⏜️
+          </div>
           <motion.div className="eyebox">
             <div
               className="pupil"

@@ -20,6 +20,7 @@ function Chatter() {
           role: process.env.REACT_APP_OWNER_ROLE || "a developer",
           bio: process.env.REACT_APP_OWNER_BIO || "",
           email: process.env.REACT_APP_OWNER_EMAIL || "",
+          REACT_APP_PHONE_NUMBER: process.env.REACT_APP_PHONE_NUMBER || "",
         };
 
         const systemPrompt = `You are a helpful AI assistant on ${ownerInfo.name}'s personal portfolio website. 

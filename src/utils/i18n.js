@@ -48,12 +48,12 @@ i18n
           // Main Content Sections
           home: {
             title: "David Fernando Esparza Esparza",
-            subtitle: "Data Engineer & Software Developer",
+            subtitle: "Software Developer",
             welcome:
               "Software Engineer with over 7 years of experience, specializing in Data Engineering and Machine Learning integration. Expert in building robust data pipelines with Python and SQL, developing Reinforcement Learning environments, and creating high-performance data visualizations. Proven track record in modernizing large-scale architectures and automating complex data workflows within AWS environments.",
             phone: "+52 (449) 108-9418",
             email: "david.fernando.esp@gmail.com",
-            location: "Aguascalientes, Ags.",
+            location: "Aguascalientes, México.",
           },
 
           about: {
@@ -125,7 +125,7 @@ i18n
             job2: {
               title: "Software Developer",
               company: "BOZ",
-              location: "Aguascalientes, Ags.",
+              location: "Aguascalientes, México.",
               period: "September 2019 - June 2020",
               responsibilities: [
                 "Migrated legacy corporate systems to modern Angular/JavaScript architectures and implemented RESTful APIs in C# for streamlined data flow.",
@@ -134,7 +134,7 @@ i18n
             job3: {
               title: "Junior Developer",
               company: "Global Hitss",
-              location: "Aguascalientes, Ags.",
+              location: "Aguascalientes, México.",
               period: "February - June 2019",
               responsibilities: [
                 "Managed the development of a centralized ticketing portal, overseeing database interactions and portal logic for a 6-developer team.",
@@ -180,7 +180,7 @@ i18n
             job2: {
               title: "Developer",
               company: "BOZ",
-              location: "Aguascalientes, Ags.",
+              location: "Aguascalientes, México.",
               period: "September 2019 - June 2020",
               responsibilities: [
                 "Front-end migration of the corporate system from WPF to Angular/JavaScript and implementation of RESTful APIs in C#.",
@@ -189,7 +189,7 @@ i18n
             job3: {
               title: "Junior Developer",
               company: "Global Hitss",
-              location: "Aguascalientes, Ags.",
+              location: "Aguascalientes, México.",
               period: "February - June 2019",
               responsibilities: [
                 "Led the development of a ticketing management web portal using C# .NET working with a team of 6 developers.",
@@ -256,7 +256,7 @@ i18n
               "Desarrollador Front-End Senior con más de 7 años de experiencia, especializado en React y altamente enfocado en la Experiencia de Usuario (UX). Liderazgo comprobado en proyectos de modernización web a gran escala, utilizando Astro y styled-jsx asegurando escalabilidad y mantenibilidad con arquitectura Python/Django y AWS.",
             phone: "+52 (449) 108-9418",
             email: "david.fernando.esp@gmail.com",
-            location: "Aguascalientes, Ags.",
+            location: "Aguascalientes, México.",
           },
 
           about: {
@@ -328,7 +328,7 @@ i18n
             job2: {
               title: "Desarrollador",
               company: "BOZ",
-              location: "Aguascalientes, Ags.",
+              location: "Aguascalientes, México.",
               period: "Septiembre 2019 - Junio 2020",
               responsibilities: [
                 "Migración front-end del sistema corporativo de WPF a Angular/JavaScript e implementación de APIs RESTful en C#.",
@@ -337,7 +337,7 @@ i18n
             job3: {
               title: "Desarrollador Junior",
               company: "Global Hitss",
-              location: "Aguascalientes, Ags.",
+              location: "Aguascalientes, México.",
               period: "Febrero - Junio 2019",
               responsibilities: [
                 "Lideré el desarrollo de un portal web de gestión de tickets usando C# .NET trabajando con un equipo de 6 desarrolladores.",

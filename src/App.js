@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   const updateDisplay = (event) => {
-    setCoordinates({ x: event.pageX, y: event.pageY });
+    setCoordinates({ x: event.clientX, y: event.clientY });
   };
 
   return (

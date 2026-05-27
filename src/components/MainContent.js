@@ -1,5 +1,6 @@
 import Chatter from "./Chatter";
 import Home from "./sections/Home";
+import Skills from "./sections/Skills";
 import About from "./sections/About";
 import Projects from "./sections/Projects";
 import Experience from "./sections/Experience";
@@ -8,15 +9,16 @@ import Contact from "./sections/Contact";
 
 function MainContent() {
   return (
-    <div>
+    <div className="main-content">
       <Home />
+      <Skills />
       <About />
       <Projects />
       <Experience />
       <Education />
-
-      <Chatter />
-
+      <div className="section">
+        <Chatter />
+      </div>
       <Contact />
     </div>
   );

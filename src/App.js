@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import TopNavbar from "./components/TopNavbar";
 import MainContent from "./components/MainContent";
 import Eye from "./components/Eye";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
@@ -40,6 +41,9 @@ function App() {
         onMouseEnter={updateDisplay}
         onMouseLeave={updateDisplay}
       >
+        <div className="particles-background">
+          <ParticlesBackground />
+        </div>
         <MainContent />
         <Eye
           x={coordinates.x}

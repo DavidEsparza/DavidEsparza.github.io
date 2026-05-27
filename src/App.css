@@ -1,14 +1,15 @@
 /* Light theme (default) */
 :root,
 [data-theme="light"] {
-  --bg-color: #7b4b5b;
-  --text-color: #000000;
-  --primary-color: #524c73;
+  --bg-color: #F7F8F3;
+  --text-color: #191620;
+  --text-dark: #7b4b5b;
+  --primary-color: #4b4666;
   --secondary-color: #caa3c4;
   --navbar-gradient-start: rgba(82, 76, 115, 1);
   --navbar-gradient-end: rgba(123, 75, 91, 1);
   --card-bg: #e3dfe7;
-  --border-color: #e3dfe7;
+  --border-color: rgba(75, 70, 102, 0.2);
   --button-bg: #826573;
   --button-hover: #7B4B5B;
 }
@@ -17,6 +18,7 @@
 [data-theme="dark"] {
   --bg-color: #1a1a1a;
   --text-color: #ffffff;
+  --text-dark: #4da6ff;
   --primary-color: #4da6ff;
   --secondary-color: #adb5bd;
   --navbar-gradient-start: rgba(30, 30, 30, 1);
@@ -134,39 +136,77 @@
 .app-container {
   display: flex;
   flex: 1;
+  background-color: var(--bg-color);
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.particles-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.particles-background #tsparticles {
+  width: 100%;
+  height: 100%;
+}
+
+.particles-background canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .main-content {
   flex: 1;
-  background-color: var(--bg-color);
+  max-width: 90%;
+  width: 100%;
+  background-color: transparent;
   color: var(--text-color);
   overflow-x: hidden;
+  position: relative;
+  z-index: 2;
 }
 
 .section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 4rem 6rem;
+  align-items: flex-start;
+  padding: 0 2rem 0 5rem;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
+  background-color: transparent;
   overflow-x: hidden;
+  overflow-y: clip;
 }
 
+
 .section h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   width: 100%;
-  max-width: 1400px;
+  max-width: none;
+  text-align: left;
+  padding: 0 1rem 0 0;
+  box-sizing: border-box;
 }
 
 .section p,
 .section ul,
 .section form,
-.section > div {
+.section>div {
   width: 100%;
-  max-width: 1400px;
+  max-width: none;
+  box-sizing: border-box;
 }
 
 .section ul {
@@ -179,40 +219,128 @@
   margin: 0;
 }
 
-
-
-/* Fullpage.js navigation styles */
-#fp-nav ul li a span,
-.fp-slidesNav ul li a span {
-  background-color: var(--text-color);
+/* Home Section Styles */
+.home-section {
+  min-height: 40vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 3vh 0 0 5rem;
 }
 
-#fp-nav ul li a.active span,
-.fp-slidesNav ul li a.active span,
-#fp-nav ul li:hover a.active span,
-.fp-slidesNav ul li:hover a.active span {
-  background-color: var(--primary-color);
+.profile-card {
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+  max-width: none;
+  background-color: transparent;
+  color: #191620;
+  text-align: left;
 }
 
-/* Always show all navigation labels */
-#fp-nav ul li .fp-tooltip {
-  color: var(--text-color);
-  font-size: 14px;
-  font-family: inherit;
-  display: block !important;
-  opacity: 1 !important;
-  right: 30px;
+.profile-card h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: #191620;
+  text-align: left;
 }
 
-/* Style active tooltip differently */
-#fp-nav ul li a.active + .fp-tooltip {
+.profile-card h3 {
   font-weight: bold;
+  margin: 1rem 0 2rem 0;
+  font-style: italic;
+  color: #191620;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.profile-card .contact-info {
+  color: #191620;
+  font-size: 1.2rem;
+}
+
+.profile-card .welcome-text {
+  color: #191620;
+  font-size: 1.5rem;
+  line-height: 4vh;
+}
+
+/* Skills Section Styles */
+.skills-section {
+  padding: 0 2rem 0 5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.skills-card {
+  background-color: var(--card-bg);
+  padding: 2vh 2.5rem 3vh 1rem;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  flex: 3;
+}
+.skills-card h2 {
+  padding: 0 0 1.5vh 1.5rem;
+  margin: 0;
+  font-size: 2.25rem;
   color: var(--primary-color);
 }
 
-/* Hover effect */
-#fp-nav ul li:hover .fp-tooltip {
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  width: 100%;
+  max-width: none;
+
+}
+
+.skill-category {
+  padding: 0 3rem;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category h3 {
+  margin: 0;
+}
+
+.skill-category p {
+  margin: 0.5vh 0 0 0;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-category h3 {
   color: var(--primary-color);
+  font-size: 1.3rem;
+  text-align: left;
+}
+
+.skill-category p {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.fast-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+  flex: 1;
+  align-self: stretch;
+  justify-content: space-around;
+}
+
+.fast-link {
+  border: 3px solid var(--primary-color);
+  padding: 0 2rem;
+  border-radius: 30px;
+  font-size: 2rem;
 }
 
 .project-item,
@@ -227,15 +355,17 @@
   box-sizing: border-box;
   max-width: 100%;
   overflow-wrap: break-word;
+  word-break: break-word;
 }
+
 
 form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
 input,
@@ -269,8 +399,8 @@ button:hover {
 /* Chatbot Styles */
 .chatbot-container {
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   height: 600px;
   background-color: var(--card-bg);
   border: 2px solid var(--border-color);
@@ -313,6 +443,8 @@ button:hover {
 .eye {
   position: fixed;
   right: 70px;
+  color: var(--text-dark);
+  z-index: 100;
 }
 
 .eyebrow {
@@ -327,15 +459,15 @@ button:hover {
 .eyebox {
   width: 65px;
   height: 65px;
-  padding-top:5px;
-  cursor: pointer; 
+  padding-top: 5px;
+  cursor: pointer;
   margin-left: 0.5rem;
 }
 
 .pupil {
   width: 10px;
-  height:10px;
-  background-color: black;
+  height: 10px;
+  background-color: var(--text-dark);
   border-radius: 50%;
   position: relative
 }
@@ -356,6 +488,7 @@ button:hover {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -387,6 +520,40 @@ button:hover {
   margin: 0;
   font-size: 15px;
   line-height: 1.5;
+}
+
+/* Responsive Design for Small Devices */
+@media (max-width: 768px) {
+  .app-container {
+    justify-content: center;
+  }
+
+  .section {
+    align-items: center;
+    padding: 0 1rem;
+  }
+
+  .skills-section {
+    padding: 0 1rem;
+  }
+
+  .home-section {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .profile-card {
+    text-align: center;
+  }
+
+  .profile-card h1,
+  .profile-card h3 {
+    text-align: center;
+  }
+
+  .section h2 {
+    text-align: center;
+  }
 }
 
 .chatbot-input {
@@ -427,37 +594,36 @@ button:hover {
     border-left: none;
     border-right: none;
   }
-  
+
   .message {
     max-width: 90%;
   }
 }
 
-/* Professional Information Styles */
 .contact-info {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
   margin: 1rem 0;
   color: var(--secondary-color);
 }
 
 .welcome-text {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  text-align: center;
+  font-size: 1.5rem;
+  line-height: 3vh;
+  text-align: left;
   max-width: 900px;
 }
 
 .section h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .section h3 {
   font-size: 1.5rem;
   color: var(--primary-color);
-  margin-bottom: 1rem;
-  text-align: center;
+  text-align: left;
 }
 
 .section h4 {
@@ -466,37 +632,6 @@ button:hover {
   margin: 0.5rem 0;
 }
 
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-}
-
-.skill-category {
-  padding: 1.5rem;
-  background-color: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.skill-category h3 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-  text-align: left;
-}
-
-.skill-category p {
-  line-height: 1.8;
-  font-size: 1rem;
-}
 
 .experience-item h3,
 .education-item h3 {
@@ -544,33 +679,77 @@ button:hover {
 
 /* Responsive adjustments for professional sections */
 @media (max-width: 1024px) {
-  .section {
-    padding: 3rem 3rem;
+  .main-content {
+    max-width: 100%;
   }
-  
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
+  .eye {
+    display: none;
+  }
+
   .skills-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .profile-card h1 {
+    font-size: 2.5rem;
+  }
+
+  .profile-card h3 {
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 768px) {
-  .section {
-    padding: 2rem 1.5rem;
+  .main-content {
+    max-width: 100%;
   }
-  
-  .section h1 {
+
+  .section {
+    padding: 2rem 1rem;
+  }
+
+  .home-section {
+    min-height: auto;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .profile-card {
+    padding: 2rem 1rem;
+  }
+
+  .profile-card h1 {
+    font-size: 2rem;
+    text-align: center;
+
+  }
+
+  .profile-card h3 {
+    font-size: 1.3rem;
+    text-align: center;
+
+  }
+
+  .section h2 {
     font-size: 2rem;
   }
-  
-  .section h2 {
-    font-size: 1.8rem;
-  }
-  
+
   .contact-info {
-    font-size: 0.9rem;
-  }
-  
-  .welcome-text {
     font-size: 1rem;
   }
+
+  .welcome-text {
+    font-size: 1.1rem;
+  }
+
+  .skills-container {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+
 }

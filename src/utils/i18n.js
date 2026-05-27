@@ -163,61 +163,6 @@ i18n
             messagePlaceholder: "Message",
             sendButton: "Send",
           },
-
-          experience: {
-            title: "Professional Experience",
-            job1: {
-              title: "Full Stack Developer",
-              company: "iad México",
-              location: "México City, México",
-              period: "July 2021 - September 2025",
-              responsibilities: [
-                "UX development: Technical management of the complete redesign of the main portal using Astro and React/styled-jsx, with a focus on usability and performance.",
-                "Product Automation: Implemented templating for the automatic generation of essential documents, including emails and PDFs.",
-                "Full-Stack Architecture: Backend maintenance and scalability with Python/Django and AWS services.",
-              ],
-            },
-            job2: {
-              title: "Developer",
-              company: "BOZ",
-              location: "Aguascalientes, México.",
-              period: "September 2019 - June 2020",
-              responsibilities: [
-                "Front-end migration of the corporate system from WPF to Angular/JavaScript and implementation of RESTful APIs in C#.",
-              ],
-            },
-            job3: {
-              title: "Junior Developer",
-              company: "Global Hitss",
-              location: "Aguascalientes, México.",
-              period: "February - June 2019",
-              responsibilities: [
-                "Led the development of a ticketing management web portal using C# .NET working with a team of 6 developers.",
-              ],
-            },
-          },
-
-          education: {
-            title: "Education",
-            degree1: {
-              title: "Strategic Information Systems Engineering",
-              institution: "Polytechnic University of Aguascalientes",
-              period: "2015 - 2019",
-            },
-            degree2: {
-              title: "Technical Career in Accounting",
-              institution: 'Cbtis 39 "Leona Vicario"',
-              period: "2012 - 2015",
-            },
-          },
-
-          contact: {
-            title: "Contact",
-            namePlaceholder: "Name",
-            emailPlaceholder: "Email",
-            messagePlaceholder: "Message",
-            sendButton: "Send",
-          },
         },
       },
       es: {
@@ -251,9 +196,9 @@ i18n
           // Main Content Sections
           home: {
             title: "David Fernando Esparza Esparza",
-            subtitle: "Desarrollador Front-End Senior",
+            subtitle: "Desarrollador de Software",
             welcome:
-              "Desarrollador Front-End Senior con más de 7 años de experiencia, especializado en React y altamente enfocado en la Experiencia de Usuario (UX). Liderazgo comprobado en proyectos de modernización web a gran escala, utilizando Astro y styled-jsx asegurando escalabilidad y mantenibilidad con arquitectura Python/Django y AWS.",
+              "Ingeniero de Software con más de 7 años de experiencia, especializado en Ingeniería de Datos e integración de Machine Learning. Experto en construir pipelines de datos robustos con Python y SQL, desarrollar entornos de Reinforcement Learning, y crear visualizaciones de datos de alto rendimiento. Historial comprobado en modernización de arquitecturas a gran escala y automatización de flujos de trabajo de datos complejos en entornos AWS.",
             phone: "+52 (449) 108-9418",
             email: "david.fernando.esp@gmail.com",
             location: "Aguascalientes, México.",
@@ -262,76 +207,77 @@ i18n
           about: {
             title: "Acerca de Mí",
             description:
-              "Desarrollador Front-End Senior con más de 7 años de experiencia, especializado en React y altamente enfocado en la Experiencia de Usuario (UX). Liderazgo comprobado en proyectos de modernización web a gran escala, utilizando Astro y styled-jsx asegurando escalabilidad y mantenibilidad con arquitectura Python/Django y AWS.",
+              "Soy un Desarrollador de Software en transición hacia Data Science, con un profundo enfoque en Machine Learning e Ingeniería de Datos. Mi experiencia radica en cerrar la brecha entre arquitecturas backend complejas y visualización de datos intuitiva. Actualmente, me enfoco en Reinforcement Learning (PPO, Gymnasium) y en construir pipelines de datos de extremo a extremo—desde web scraping y gestión de SQLite hasta dashboards interactivos de front-end. Combino una sólida base en Sistemas de Información Estratégica con años de experiencia profesional en Python, Django e infraestructura Cloud.",
           },
 
           skills: {
-            title: "Habilidades",
-            frontEnd: {
-              title: "Front-End",
+            title: "Habilidades Técnicas",
+            dataScience: {
+              title: "Data Science y ML",
               items:
-                "React, JavaScript (ES6+), Astro, styled-jsx, Ant Design, UI/UX, Angular, HTML5/CSS, React Native",
+                "Python (Pandas, NumPy), Reinforcement Learning (Gymnasium, PPO), Web Scraping (BeautifulSoup), Modelado de Datos, Pipelines ETL",
             },
             backEnd: {
               title: "Back-End y BD",
               items:
-                "Python (Django), C# (.NET), SQL, MeiliSearch, Elasticsearch, C++",
+                "Python (Django), SQL (SQLite, PostgreSQL), MeiliSearch, Elasticsearch, RESTful APIs, C# (.NET)",
+            },
+            visualization: {
+              title: "Visualización y Front-End",
+              items:
+                "React, Astro, Dashboards de Datos, UI/UX para Herramientas de Datos, JavaScript (ES6+), HTML5/CSS",
             },
             cloud: {
-              title: "Nube y Herramientas",
-              items: "AWS (S3, EC2), Git, Docker, RESTful APIs",
+              title: "Nube y DevOps",
+              items:
+                "AWS (S3, EC2), Docker, Git, Gestión de Configuración, Linux",
             },
             languages: {
               title: "Idiomas",
               items: "Español (Nativo), Inglés (Avanzado)",
             },
-            soft: {
-              title: "Habilidades Blandas",
-              items:
-                "Liderazgo Técnico, Comunicación Ejecutiva, Pensamiento Crítico",
-            },
           },
 
           projects: {
-            title: "Proyectos",
-            subtitle: "Proyectos y Logros Clave",
+            title: "Proyectos de Datos y ML",
+            subtitle: "Machine Learning e Ingeniería Analítica",
             project1: {
-              title: "Rediseño del Portal - iad México",
+              title: "Agente ML de Trayectoria en Wikipedia",
               description:
-                "Gestión técnica del rediseño completo del portal principal usando Astro y React/styled-jsx, con enfoque en usabilidad y rendimiento.",
+                "Desarrollé un agente de Reinforcement Learning usando Gymnasium y PPO para navegar entre páginas aleatorias de Wikipedia a través de hipervínculos. Implementé entornos personalizados y estructuras de datos para optimizar la búsqueda de rutas dentro de una restricción de 30 pasos.",
             },
             project2: {
-              title: "Automatización de Productos - iad México",
+              title: "Pipeline de Análisis de Juegos",
               description:
-                "Implementé plantillas para la generación automática de documentos esenciales, incluyendo correos electrónicos y PDFs.",
+                'Construí un repositorio de datos integral para analizar métricas de ejecución de "Blue Prince". Creé un proceso ETL personalizado en Python para extraer, limpiar y almacenar datos de juegos en SQLite, con una interfaz de entrada manual de datos para seguimiento de métricas de alta fidelidad.',
             },
             project3: {
-              title: "Migración Front-end - BOZ",
+              title: "Visualización de Datos de Portafolio",
               description:
-                "Lideré la migración front-end del sistema corporativo de WPF a Angular/JavaScript e implementación de APIs RESTful en C#.",
+                'Diseñé una plataforma personal de visualización de datos para mostrar métricas de repositorios y rendimiento de modelos ML, enfocándome en la "Separación de Responsabilidades" entre la capa de servicios de datos y el front-end basado en React.',
             },
           },
 
           experience: {
             title: "Experiencia Profesional",
             job1: {
-              title: "Desarrollador Full Stack",
+              title: "Desarrollador Full Stack (Enfoque en Datos)",
               company: "iad México",
               location: "Ciudad de México, México",
               period: "Julio 2021 - Septiembre 2025",
               responsibilities: [
-                "Desarrollo UX: Gestión técnica del rediseño completo del portal principal usando Astro y React/styled-jsx, con enfoque en usabilidad y rendimiento.",
-                "Automatización de Productos: Implementé plantillas para la generación automática de documentos esenciales, incluyendo correos electrónicos y PDFs.",
-                "Arquitectura Full-Stack: Mantenimiento y escalabilidad del backend con Python/Django y servicios AWS.",
+                "Arquitecturé y mantuve sistemas backend escalables usando Python/Django y AWS, enfocándome en integridad de datos y rendimiento de APIs.",
+                "Automaticé la generación de documentos y reportes a través de motores de plantillas complejos, reduciendo el tiempo de procesamiento manual para datos empresariales esenciales.",
+                "Lideré la modernización técnica de plataformas front-end usando Astro y React, mejorando la interacción del usuario con interfaces web intensivas en datos.",
               ],
             },
             job2: {
-              title: "Desarrollador",
+              title: "Desarrollador de Software",
               company: "BOZ",
               location: "Aguascalientes, México.",
               period: "Septiembre 2019 - Junio 2020",
               responsibilities: [
-                "Migración front-end del sistema corporativo de WPF a Angular/JavaScript e implementación de APIs RESTful en C#.",
+                "Migré sistemas corporativos heredados a arquitecturas modernas Angular/JavaScript e implementé APIs RESTful en C# para flujo de datos simplificado.",
               ],
             },
             job3: {
@@ -340,7 +286,7 @@ i18n
               location: "Aguascalientes, México.",
               period: "Febrero - Junio 2019",
               responsibilities: [
-                "Lideré el desarrollo de un portal web de gestión de tickets usando C# .NET trabajando con un equipo de 6 desarrolladores.",
+                "Gestioné el desarrollo de un portal centralizado de tickets, supervisando interacciones de base de datos y lógica del portal para un equipo de 6 desarrolladores.",
               ],
             },
           },

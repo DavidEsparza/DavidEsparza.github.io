@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { GoogleGenAI } from "@google/genai";
+import { div } from "motion/react-client";
 
 // The client gets the API key from the environment variable `GEMINI_API_KEY`.
 const ai = new GoogleGenAI({
@@ -109,39 +110,41 @@ Introduce yourself in a friendly way (2-3 sentences max).`;
   };
 
   return (
-    <div className="chatbot-container">
-      <div className="chatbot-messages">
-        {messages.map((msg, index) => (
-          <div
-            key={index}
-            className={`message ${
-              msg.role === "user" ? "user-message" : "assistant-message"
-            }`}
-          >
-            <strong>{msg.role === "user" ? "You" : "Assistant"}:</strong>
-            <p>{msg.content}</p>
-          </div>
-        ))}
-        {loading && (
-          <div className="message assistant-message">
-            <strong>Assistant:</strong>
-            <p>Typing...</p>
-          </div>
-        )}
-      </div>
+    <div className="section">
+      <div className="chatbot-container">
+        <div className="chatbot-messages">
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`message ${
+                msg.role === "user" ? "user-message" : "assistant-message"
+              }`}
+            >
+              <strong>{msg.role === "user" ? "You" : "Assistant"}:</strong>
+              <p>{msg.content}</p>
+            </div>
+          ))}
+          {loading && (
+            <div className="message assistant-message">
+              <strong>Assistant:</strong>
+              <p>Typing...</p>
+            </div>
+          )}
+        </div>
 
-      <div className="chatbot-input">
-        <input
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyPress={handleKeyPress}
-          placeholder="Ask me anything..."
-          disabled={loading}
-        />
-        <button onClick={sendMessage} disabled={loading || !input.trim()}>
-          Send
-        </button>
+        <div className="chatbot-input">
+          <input
+            type="text"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyPress={handleKeyPress}
+            placeholder="Ask me anything..."
+            disabled={loading}
+          />
+          <button onClick={sendMessage} disabled={loading || !input.trim()}>
+            Send
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -22,7 +22,6 @@ i18n
           // Top Navbar
           navbar: {
             home: "Home",
-            about: "About",
             portfolio: "Portfolio",
             skills: "Skills",
             projects: "Projects",
@@ -37,7 +36,6 @@ i18n
           sidebar: {
             title: "Quick Links",
             home: "Home",
-            about: "About",
             skills: "Skills",
             projects: "Projects",
             experience: "Experience",
@@ -54,12 +52,6 @@ i18n
             phone: "+52 (449) 108-9418",
             email: "david.fernando.esp@gmail.com",
             location: "Aguascalientes, México.",
-          },
-
-          about: {
-            title: "About Me",
-            description:
-              "I am a Software Developer transitioning into Data Science, with a deep focus on Machine Learning and Data Engineering. My expertise lies in bridging the gap between complex backend architectures and intuitive data visualization. Currently, I am focused on Reinforcement Learning (PPO, Gymnasium) and building end-to-end data pipelines—from web scraping and SQLite management to interactive front-end dashboards. I combine a strong foundation in Strategic Information Systems with years of professional experience in Python, Django, and Cloud infrastructure.",
           },
 
           skills: {
@@ -89,24 +81,34 @@ i18n
               items: "Spanish (Native), English (Advanced)",
             },
           },
+          fastLinks: {
+
+          },
 
           projects: {
             title: "Data & ML Projects",
             subtitle: "Machine Learning & Analytical Engineering",
+            viewOnGitHub: "View on GitHub",
             project1: {
               title: "Wikipedia Trajectory ML Agent",
               description:
                 "Developed a Reinforcement Learning agent using Gymnasium and PPO to navigate between random Wikipedia pages via hyperlinks. Implemented custom environments and data structures to optimize pathfinding within a 30-step constraint.",
+              tags: ["Custom Gymnasium Envs", "Reinforcement Learning", "PPO Algorithm", "Network Analysis", "Stable Baselines3"],
+              githubUrl: "https://github.com/DavidEsparza/wikipedia-philosophy-route",
             },
             project2: {
               title: "Game Analytics Pipeline",
               description:
                 'Built a comprehensive data repository for analyzing "Blue Prince" run metrics. Created a custom Python ETL process to scrape, clean, and store game data in SQLite, featuring a manual data-entry interface for high-fidelity metric tracking.',
+              tags: ["Python", "Schema Design", "ETL Pipelines", "Pandas", "SQLite"],
+              githubUrl: "https://github.com/DavidEsparza/Blue-prince-data-analysis",
             },
             project3: {
               title: "Portfolio Data Visualization",
               description:
                 'Engineered a personal data-display platform to visualize repository metrics and ML model performance, focusing on the "Separation of Concerns" between the data service layer and the React-based front-end.',
+              tags: ["React", "UI/UX for Data", "Responsive Design", "D3.js / Plotly", "Service Layer Architecture"],
+              githubUrl: "https://github.com/DavidEsparza/my-professional-page",
             },
           },
           experience: {
@@ -204,12 +206,6 @@ i18n
             location: "Aguascalientes, México.",
           },
 
-          about: {
-            title: "Acerca de Mí",
-            description:
-              "Soy un Desarrollador de Software en transición hacia Data Science, con un profundo enfoque en Machine Learning e Ingeniería de Datos. Mi experiencia radica en cerrar la brecha entre arquitecturas backend complejas y visualización de datos intuitiva. Actualmente, me enfoco en Reinforcement Learning (PPO, Gymnasium) y en construir pipelines de datos de extremo a extremo—desde web scraping y gestión de SQLite hasta dashboards interactivos de front-end. Combino una sólida base en Sistemas de Información Estratégica con años de experiencia profesional en Python, Django e infraestructura Cloud.",
-          },
-
           skills: {
             title: "Habilidades Técnicas",
             dataScience: {
@@ -241,20 +237,27 @@ i18n
           projects: {
             title: "Proyectos de Datos y ML",
             subtitle: "Machine Learning e Ingeniería Analítica",
+            viewOnGitHub: "Ver en GitHub",
             project1: {
               title: "Agente ML de Trayectoria en Wikipedia",
               description:
                 "Desarrollé un agente de Reinforcement Learning usando Gymnasium y PPO para navegar entre páginas aleatorias de Wikipedia a través de hipervínculos. Implementé entornos personalizados y estructuras de datos para optimizar la búsqueda de rutas dentro de una restricción de 30 pasos.",
+              tags: ["Entornos Gymnasium Personalizados", "Reinforcement Learning", "Algoritmo PPO", "Análisis de Redes", "Stable Baselines3"],
+              githubUrl: "https://github.com/DavidEsparza/wikipedia-philosophy-route",
             },
             project2: {
               title: "Pipeline de Análisis de Juegos",
               description:
                 'Construí un repositorio de datos integral para analizar métricas de ejecución de "Blue Prince". Creé un proceso ETL personalizado en Python para extraer, limpiar y almacenar datos de juegos en SQLite, con una interfaz de entrada manual de datos para seguimiento de métricas de alta fidelidad.',
+              tags: ["Python", "Diseño de Esquemas", "Pipelines ETL", "Pandas", "SQLite"],
+              githubUrl: "https://github.com/DavidEsparza/Blue-prince-data-analysis",
             },
             project3: {
               title: "Visualización de Datos de Portafolio",
               description:
                 'Diseñé una plataforma personal de visualización de datos para mostrar métricas de repositorios y rendimiento de modelos ML, enfocándome en la "Separación de Responsabilidades" entre la capa de servicios de datos y el front-end basado en React.',
+              tags: ["React", "UI/UX para Datos", "Diseño Responsivo", "D3.js / Plotly", "Arquitectura de Capa de Servicios"],
+              githubUrl: "https://github.com/DavidEsparza/my-professional-page",
             },
           },
 

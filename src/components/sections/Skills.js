@@ -32,17 +32,7 @@ function Skills() {
         </div>
       </div>
 
-      <div className="fast-link-list">
-        <div className="fast-link">
-          <p>a</p>
-        </div>
-        <div className="fast-link">
-          <p>a</p>
-        </div>
-        <div className="fast-link">
-          <p>a</p>
-        </div>
-      </div>
+      <div className="fast-link-list"></div>
     </div>
   );
 }

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { GoogleGenAI } from "@google/genai";
-import { div } from "motion/react-client";
 
 // The client gets the API key from the environment variable `GEMINI_API_KEY`.
 const ai = new GoogleGenAI({
@@ -51,10 +50,7 @@ Introduce yourself in a friendly way (2-3 sentences max).`;
             content: response.text,
           },
         ]);
-
-        console.log("Chatbot initialized:", response.text);
       } catch (error) {
-        console.error("Error initializing chatbot:", error);
         setMessages([
           {
             role: "assistant",
@@ -89,7 +85,6 @@ Introduce yourself in a friendly way (2-3 sentences max).`;
 
       setMessages((prev) => [...prev, assistantMessage]);
     } catch (error) {
-      console.error("Error sending message:", error);
       setMessages((prev) => [
         ...prev,
         {

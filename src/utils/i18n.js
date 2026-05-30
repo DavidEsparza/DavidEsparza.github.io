@@ -52,10 +52,14 @@ i18n
             phone: "+52 (449) 108-9418",
             email: "david.fernando.esp@gmail.com",
             location: "Aguascalientes, México.",
+            myGithub: "My Github",
+            contactMe: "Contact me",
+            seeResume: "Check my resume",
           },
 
           skills: {
             title: "Technical Skills",
+            clickMe: "Click me!",
             dataScience: {
               title: "Data Science & ML",
               items:
@@ -204,10 +208,14 @@ i18n
             phone: "+52 (449) 108-9418",
             email: "david.fernando.esp@gmail.com",
             location: "Aguascalientes, México.",
+            myGithub: "Mi Github",
+            contactMe: "Contáctame",
+            seeResume: "Ver mi currículum",
           },
 
           skills: {
             title: "Habilidades Técnicas",
+            clickMe: "¡Haz clic!",
             dataScience: {
               title: "Data Science y ML",
               items:

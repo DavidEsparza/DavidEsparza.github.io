@@ -17,7 +17,7 @@ function ParticlesBackground() {
     // Simple particle system
     const particles = [];
     const particleCount = 550;
-    const maxX = canvas.width / 2; // Left third of the page
+    const maxX = canvas.width / 1.25; // Left third of the page
 
     for (let i = 0; i < particleCount; i++) {
       particles.push({

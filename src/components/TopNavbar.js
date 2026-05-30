@@ -20,7 +20,7 @@ function TopNavbar() {
       variants={slideFromRight}
     >
       <div className="logo">
-        <h1>{t('home.title')}</h1>
+        <h1>{t('navbar.title')}</h1>
       </div>
       <div className="navbar-controls">
         <button

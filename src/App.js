@@ -1,14 +1,21 @@
 import "./App.css";
 import { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import TopNavbar from "./components/TopNavbar";
 import MainContent from "./components/MainContent";
 import Eye from "./components/Eye";
 import ParticlesBackground from "./components/ParticlesBackground";
 
 function App() {
+  const { t, i18n } = useTranslation();
   const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
   const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
   const containerRef = useRef(null);
+
+  // Update page title based on language
+  useEffect(() => {
+    document.title = t('navbar.title');
+  }, [i18n.language, t]);
 
   useEffect(() => {
     if (containerRef.current) {

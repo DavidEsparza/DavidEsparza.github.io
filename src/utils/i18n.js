@@ -21,6 +21,7 @@ i18n
         translation: {
           // Top Navbar
           navbar: {
+            title: "David Esparza - Portfolio",
             home: "Home",
             portfolio: "Portfolio",
             skills: "Skills",
@@ -48,7 +49,7 @@ i18n
             title: "David Fernando Esparza Esparza",
             subtitle: "Software Developer",
             welcome:
-              "Software Engineer with over 7 years of experience, specializing in Data Engineering and Machine Learning integration. Expert in building robust data pipelines with Python and SQL, developing Reinforcement Learning environments, and creating high-performance data visualizations. Proven track record in modernizing large-scale architectures and automating complex data workflows within AWS environments.",
+              "Software Engineer with over 7 years of experience, specializing in Data Analytics and Machine Learning integration. Expert in building robust data pipelines with Python and SQL, developing Reinforcement Learning environments, and creating high-performance data visualizations. Proven track record in modernizing large-scale architectures and automating complex data workflows within AWS environments.",
             phone: "+52 (449) 108-9418",
             email: "david.fernando.esp@gmail.com",
             location: "Aguascalientes, México.",
@@ -175,6 +176,7 @@ i18n
         translation: {
           // Top Navbar
           navbar: {
+            title: "David Esparza - Portafolio",
             home: "Inicio",
             about: "Acerca de",
             portfolio: "Portafolio",

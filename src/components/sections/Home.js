@@ -1,8 +1,15 @@
 import { useTranslation } from "react-i18next";
 
 function Home() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const resumeEnglish = process.env.PUBLIC_URL + "/David_Fernando_Esparza_Resume.docx";
+  const resumeSpanish = process.env.PUBLIC_URL + "/David_Fernando_Esparza_CV.docx";
+  
+  // Get the current resume based on language
+  const currentResume = i18n.resolvedLanguage === 'es' ? resumeSpanish : resumeEnglish;
+  const currentResumeFilename = i18n.resolvedLanguage === 'es' 
+    ? "David_Fernando_Esparza_CV.docx" 
+    : "David_Fernando_Esparza_Resume.docx";
 
   return (
     <div className="section home-section">
@@ -35,8 +42,8 @@ function Home() {
                 <span>{t("home.contactMe")}</span>
               </a>
               <a
-                href={resumeEnglish}
-                download="David_Fernando_Esparza_Resume.docx"
+                href={currentResume}
+                download={currentResumeFilename}
                 className="profile-btn"
               >
                 <svg className="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">

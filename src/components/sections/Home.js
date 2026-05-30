@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import resumeEnglish from "../../assets/CV David Fernando Esparza Esparza_English 2.docx";
 
 function Home() {
   const { t } = useTranslation();
+  const resumeEnglish = process.env.PUBLIC_URL + "/David_Fernando_Esparza_Resume.docx";
 
   return (
     <div className="section home-section">

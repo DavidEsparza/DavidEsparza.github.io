@@ -32,19 +32,24 @@ const calculatePupilPosition = (x, y, width) => {
   const { MOVE_ZONE_Y, MOVE_ZONE_X, START_TOP, START_RIGHT, PUPIL_OFFSET } =
     EYE_CONFIG;
 
+  const PUPIL_SIZE = 10; // Pupil diameter in pixels
+  const EYEBOX_WIDTH = 65;
+  const EYEBOX_HEIGHT = 65;
+  
   let eyePositionX = 0;
   let eyePositionY = 0;
 
-  // Calculate vertical position
+  // Calculate vertical position (constrain to keep pupil inside eyebox)
   if (y > START_TOP) {
-    eyePositionY = Math.min(y - START_TOP, MOVE_ZONE_Y);
+    eyePositionY = Math.min(y - START_TOP, Math.min(MOVE_ZONE_Y, EYEBOX_HEIGHT - PUPIL_SIZE));
   }
 
-  // Calculate horizontal position
+  // Calculate horizontal position (constrain to keep pupil inside eyebox)
   const rightBoundaryStart = width - (START_RIGHT + MOVE_ZONE_X);
+  const maxX = Math.min(START_RIGHT - PUPIL_OFFSET, EYEBOX_WIDTH - PUPIL_SIZE);
 
   if (x > rightBoundaryStart) {
-    eyePositionX = Math.min(x - rightBoundaryStart, START_RIGHT - PUPIL_OFFSET);
+    eyePositionX = Math.min(x - rightBoundaryStart, maxX);
   }
 
   return [eyePositionX, eyePositionY];
@@ -91,10 +96,10 @@ function Eye({ x, y, width }) {
       ) : (
         <>
           <div 
-            className="eyebrow"
+            className="eyebrow-container"
             style={{ transform: `translateY(${eyebrowOffset}px)` }}
           >
-            ⏜️
+            <div className="eyebrow-arc"></div>
           </div>
           <motion.div className="eyebox">
             <div

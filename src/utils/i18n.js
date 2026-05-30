@@ -51,7 +51,7 @@ i18n
             welcome:
               "Software Engineer with over 7 years of experience, specializing in Data Analytics and Machine Learning integration. Expert in building robust data pipelines with Python and SQL, developing Reinforcement Learning environments, and creating high-performance data visualizations. Proven track record in modernizing large-scale architectures and automating complex data workflows within AWS environments.",
             phone: "+52 (449) 108-9418",
-            email: "david.fernando.esp@gmail.com",
+            email: "David.Fernando.Esp@gmail.com",
             location: "Aguascalientes, México.",
             myGithub: "My Github",
             contactMe: "Contact me",
@@ -170,6 +170,15 @@ i18n
             messagePlaceholder: "Message",
             sendButton: "Send",
           },
+
+          footer: {
+            quickLinks: "Quick Links",
+            connect: "Connect",
+            contact: "Contact",
+            location: "Aguascalientes, México",
+            copyright: "© 2026 David Esparza. All rights reserved.",
+            builtWith: "Built with React",
+          },
         },
       },
       es: {
@@ -206,9 +215,9 @@ i18n
             title: "David Fernando Esparza Esparza",
             subtitle: "Desarrollador de Software",
             welcome:
-              "Ingeniero de Software con más de 7 años de experiencia, especializado en Ingeniería de Datos e integración de Machine Learning. Experto en construir pipelines de datos robustos con Python y SQL, desarrollar entornos de Reinforcement Learning, y crear visualizaciones de datos de alto rendimiento. Historial comprobado en modernización de arquitecturas a gran escala y automatización de flujos de trabajo de datos complejos en entornos AWS.",
+              "Ingeniero de Software con más de 7 años de experiencia, especializado en Análisis de Datos e integración de Machine Learning. Experto en construir pipelines de datos robustos con Python y SQL, desarrollar entornos de Reinforcement Learning, y crear visualizaciones de datos de alto rendimiento. Historial comprobado en modernización de arquitecturas a gran escala y automatización de flujos de trabajo de datos complejos en entornos AWS.",
             phone: "+52 (449) 108-9418",
-            email: "david.fernando.esp@gmail.com",
+            email: "David.Fernando.Esp@gmail.com",
             location: "Aguascalientes, México.",
             myGithub: "Mi Github",
             contactMe: "Contáctame",
@@ -324,6 +333,15 @@ i18n
             emailPlaceholder: "Correo Electrónico",
             messagePlaceholder: "Mensaje",
             sendButton: "Enviar",
+          },
+
+          footer: {
+            quickLinks: "Enlaces Rápidos",
+            connect: "Conectar",
+            contact: "Contacto",
+            location: "Aguascalientes, México",
+            copyright: "© 2026 David Esparza. Todos los derechos reservados.",
+            builtWith: "Construido con React",
           },
         },
       },

@@ -5,6 +5,7 @@ import TopNavbar from "./components/TopNavbar";
 import MainContent from "./components/MainContent";
 import Eye from "./components/Eye";
 import ParticlesBackground from "./components/ParticlesBackground";
+import Footer from "./components/Footer";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -59,6 +60,8 @@ function App() {
           height={containerSize.height}
         />
       </div>
+
+      <Footer />
     </div>
   );
 }

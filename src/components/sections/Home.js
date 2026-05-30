@@ -33,7 +33,7 @@ function Home() {
                 <span>{t("home.myGithub")}</span>
               </a>
               <a
-                href="mailto:david.fernando.esp@gmail.com"
+                href="mailto:David.Fernando.Esp@gmail.com"
                 className="profile-btn"
               >
                 <svg className="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="currentColor">

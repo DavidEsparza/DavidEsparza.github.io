@@ -2,7 +2,7 @@
   "name": "personal-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DavidEsparza.github.io/personal-page",
+  "homepage": "https://DavidEsparza.github.io",
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.49",
     "@google/genai": "^1.34.0",

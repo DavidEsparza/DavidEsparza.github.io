@@ -18,36 +18,66 @@ A dedicated section featuring data analysis and visualizations from videogame da
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `yarn build`
+### `npm run build`
 
 Builds the app for production to the `build` folder.\
 The build is optimized for best performance.
 
-### `yarn test`
+### `npm run deploy`
+
+Deploys the built app to GitHub Pages manually.
+
+### `npm test`
 
 Launches the test runner in the interactive watch mode.
 
-### Analyzing the Bundle Size
+## Deployment to GitHub Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is configured to deploy automatically to GitHub Pages when you push to the main branch.
 
-### Making a Progressive Web App
+### Initial Setup (One-time)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Push your code to GitHub
+2. Go to your repository settings on GitHub
+3. Navigate to **Pages** in the sidebar
+4. Under **Source**, select **GitHub Actions**
 
-### Advanced Configuration
+### Automatic Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Once configured, every push to the `main` branch will automatically:
+- Build your React app
+- Deploy it to GitHub Pages
+- Make it available at: `https://DavidEsparza.github.io/personal-page`
 
-### Deployment
+### Manual Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can also deploy manually using:
+```bash
+npm run deploy
+```
 
-### `yarn build` fails to minify
+This will build and deploy your app using the gh-pages package.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Installation
+
+```bash
+# Install dependencies
+npm install --legacy-peer-deps
+
+# Start development server
+npm start
+
+# Build for production
+npm run build
+```
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).

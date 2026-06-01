@@ -1,15 +1,15 @@
 import { useTranslation } from "react-i18next";
+import resumeEnglishPDF from "../../assets/Resume David Fernando Esparza Esparza English.docx.pdf";
+import resumeSpanishPDF from "../../assets/Resume David Fernando Esparza Esparza Spanish.docx.pdf";
 
 function Home() {
   const { t, i18n } = useTranslation();
-  const resumeEnglish = process.env.PUBLIC_URL + "/David_Fernando_Esparza_Resume.docx";
-  const resumeSpanish = process.env.PUBLIC_URL + "/David_Fernando_Esparza_CV.docx";
   
   // Get the current resume based on language
-  const currentResume = i18n.resolvedLanguage === 'es' ? resumeSpanish : resumeEnglish;
+  const currentResume = i18n.resolvedLanguage === 'es' ? resumeSpanishPDF : resumeEnglishPDF;
   const currentResumeFilename = i18n.resolvedLanguage === 'es' 
-    ? "David_Fernando_Esparza_CV.docx" 
-    : "David_Fernando_Esparza_Resume.docx";
+    ? "Resume_David_Fernando_Esparza_Esparza_Spanish.pdf" 
+    : "Resume_David_Fernando_Esparza_Esparza_English.pdf";
 
   return (
     <div className="section home-section">

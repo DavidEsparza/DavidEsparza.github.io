@@ -221,7 +221,7 @@ i18n
             location: "Aguascalientes, México.",
             myGithub: "Mi Github",
             contactMe: "Contáctame",
-            seeResume: "Ver mi currículum",
+            seeResume: "Mi currículum",
           },
 
           skills: {

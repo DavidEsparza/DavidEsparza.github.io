@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 
 export const themes = {
   light: 'light',
-  dark: 'dark'
+  dark: 'dark',
+  matrix: 'matrix',
 };
 
 export const useTheme = () => {

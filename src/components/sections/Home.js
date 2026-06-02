@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import resumeEnglishPDF from "../../assets/Resume David Fernando Esparza Esparza English.docx.pdf";
-import resumeSpanishPDF from "../../assets/Resume David Fernando Esparza Esparza Spanish.docx.pdf";
+import resumeEnglishPDF from "../../assets/Resume David Fernando Esparza Esparza English.pdf";
+import resumeSpanishPDF from "../../assets/Resume David Fernando Esparza Esparza Spanish.pdf";
 
 function Home() {
   const { t, i18n } = useTranslation();

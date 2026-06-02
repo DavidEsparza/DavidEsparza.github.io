@@ -4,6 +4,10 @@ import { useTranslation } from "react-i18next";
 function RightSidebar() {
   const { t } = useTranslation();
   
+  // Get CSS variable for link hover color
+  const linkHoverColor = getComputedStyle(document.documentElement)
+    .getPropertyValue('--link-hover-color').trim() || '#007bff';
+  
   const links = [
     { href: "#home", textKey: "sidebar.home" },
     { href: "#about", textKey: "sidebar.about" },
@@ -64,7 +68,7 @@ function RightSidebar() {
             }}
             whileTap={{ scale: 0.95 }}
           >
-            <motion.a href={link.href} whileHover={{ color: "#007bff" }}>
+            <motion.a href={link.href} whileHover={{ color: linkHoverColor }}>
               {t(link.textKey)}
             </motion.a>
           </motion.li>

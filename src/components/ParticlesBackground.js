@@ -14,6 +14,14 @@ function ParticlesBackground() {
     };
     updateCanvasSize();
 
+    // Get CSS variables for particle colors
+    const getParticleColors = () => {
+      const styles = getComputedStyle(document.documentElement);
+      const particleColor = styles.getPropertyValue('--particle-color').trim() || 'rgba(180, 184, 189, 0.5)';
+      const particleStrokeBase = styles.getPropertyValue('--particle-stroke-base').trim() || '180, 184, 189';
+      return { particleColor, particleStrokeBase };
+    };
+
     // Simple particle system
     const particles = [];
     const particleCount = 550;
@@ -30,6 +38,9 @@ function ParticlesBackground() {
     }
 
     function animate() {
+      // Get fresh colors on each frame to support theme changes
+      const { particleColor, particleStrokeBase } = getParticleColors();
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       particles.forEach((particle, i) => {
@@ -41,7 +52,7 @@ function ParticlesBackground() {
         if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
 
         // Draw particle
-        ctx.fillStyle = "rgba(180, 184, 189, 0.5)";
+        ctx.fillStyle = particleColor;
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
         ctx.fill();
@@ -54,7 +65,7 @@ function ParticlesBackground() {
             const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 150) {
-              ctx.strokeStyle = `rgba(180, 184, 189, ${0.6 * (1 - distance / 150)})`;
+              ctx.strokeStyle = `rgba(${particleStrokeBase}, ${0.6 * (1 - distance / 150)})`;
               ctx.lineWidth = 1.5;
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
